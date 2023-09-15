@@ -10,4 +10,6 @@
     <string name="title_home">Задание 1</string>
     <string name="title_dashboard">Задание 2</string>
     <string name="title_notifications">Задание 3</string>
+    <string name="country">Страна</string>
+    <string name="town">Город</string>
 </resources>
