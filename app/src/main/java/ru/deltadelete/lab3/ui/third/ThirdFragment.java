@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -37,7 +36,7 @@ public class ThirdFragment extends Fragment {
         Faker faker = new Faker(new Locale("ru"));
         Town[] towns = new Town[50];
         for (int i = 0; i < towns.length; i++) {
-            towns[i] = Town.fromFakerAddress(faker.address());
+            towns[i] = Town.fromFaker(faker);
         }
         var adapter = new TownAdapter(getContext(), List.of(towns));
         list.setAdapter(adapter);
