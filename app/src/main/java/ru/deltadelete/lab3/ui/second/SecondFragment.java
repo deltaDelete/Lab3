@@ -19,8 +19,7 @@ public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentSecondBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -30,14 +29,10 @@ public class SecondFragment extends Fragment {
     }
 
     private void initList(ListView list2) {
-        var ctx =  getContext();
-        var items = ctx.getResources().getStringArray(R.array.first_list);
+        var ctx = getContext();
+        // var items = ctx.getResources().getStringArray(R.array.first_list);
         // или
-        // var items = new String[] {
-        //      "1",
-        //      "2",
-        //      "3"
-        // };
+        var items = new String[]{"1", "2", "3", "4", "5"};
         var adapter = new ArrayAdapter(ctx, android.R.layout.simple_list_item_1, items);
 
         list2.setAdapter(adapter);
